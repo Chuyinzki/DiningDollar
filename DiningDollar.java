@@ -30,7 +30,6 @@ public class DiningDollar {
  }*/
 
  while(!quarterL.equals("fall") && !quarterL.equals("winter") && !quarterL.equals("spring") )
-        // && !quarterL.equals("Fall") && !quarterL.equals("Winter") && !quarterL.equals("Spring"))
  {
   System.out.print( "\n" +"\"" + quarter + "\" is not a valid quarter dummy!" 
    + "\n" +"Please input what quarter you are in. (Ex. Fall, Winter, Spring): ");
@@ -48,7 +47,7 @@ public class DiningDollar {
  week = scan.nextInt();
 
  //week check for fall
- if(quarterL.equals("fall") || quarterL.equals("Fall"))
+ if(quarterL.equals("fall"))
  {
   while(week < 0 || week > 11)
   {
@@ -60,8 +59,7 @@ public class DiningDollar {
  }
 
  //week check for spring and winter
- if(quarterL.equals("winter") || quarterL.equals("spring") || quarterL.equals("Winter") ||
-    quarterL.equals("Spring"))
+ if(quarterL.equals("winter") || quarterL.equals("spring"))
  {
   while(week < 1 || week > 11)
   {
