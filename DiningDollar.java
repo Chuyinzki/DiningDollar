@@ -40,6 +40,7 @@ public class DiningDollar {
   /*for(int i = 0; quarter[i] != '\0'; i++){
    quarterL[i] = tolower(quarter[i]);
   }*/
+  //poop
  }
  
  //What week is it?
