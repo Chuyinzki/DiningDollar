@@ -9,7 +9,7 @@ public class DiningDollar {
   int spendPerWeek;
   int outByWeek;
   int dinShould;
-  int week;
+  int week = -1;
   int weekMath;
   int ros;
   int weeksLeftOfMoney = 0;
@@ -43,18 +43,36 @@ public class DiningDollar {
  }
  
  //What week is it?
- System.out.print( "\n" +"What week is it in this quarter: ");
- week = scan.nextInt();
+
+ String sWeek = "";
+ while(week < 0){
+   System.out.print( "\n" +"What week is it in this quarter: ");
+   try{
+        sWeek = scan.next();
+        week = Integer.parseInt(sWeek);
+     }
+     catch(NumberFormatException e){
+      System.out.println("That's not gonna work!");
+     }
+ }
+
+ //week = scan.nextInt();
 
  //week check for fall
  if(quarterL.equals("fall"))
  {
   while(week < 0 || week > 11)
   {
-   System.out.print( "\n" +"Don't be a smartass, there is no such thing as week " + week
+   System.out.print( "\n" +"Don't be a smartass, there is no such thing as week " + sWeek
     + " in " + quarterL + ". " + "\n"
     + "What week is it in this quarter? (Finals week is 11): ");
-   week = scan.nextInt();
+   try{
+        sWeek = scan.next();
+        week = Integer.parseInt(sWeek);
+     }
+     catch(NumberFormatException e){
+      System.out.println("That's not gonna work!");
+     }
   }
  }
 
@@ -63,9 +81,15 @@ public class DiningDollar {
  {
   while(week < 1 || week > 11)
   {
-   System.out.print( "\n" +"Don't be a smartass, there is no such thing as week " + week
+   System.out.print( "\n" +"Don't be a smartass, there is no such thing as week " + sWeek
     + " in " + quarterL + ". What week is it in this quarter? (Finals week is 11): ");
-   week = scan.nextInt();
+   try{
+        sWeek = scan.next();
+        week = Integer.parseInt(sWeek);
+     }
+     catch(NumberFormatException e){
+      System.out.println("That's not gonna work!");
+     }
   }
  }
 
